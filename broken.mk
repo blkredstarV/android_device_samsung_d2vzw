@@ -1,16 +1,12 @@
-$(call inherit-product, device/samsung/d2att/full_d2att.mk)
+$(call inherit-product, device/samsung/d2vzw/full_d2vzw.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/broken/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-# Inherit some common stuff.
-$(call inherit-product, vendor/broken/config/common_full_phone.mk)
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=d2uc \
-    TARGET_DEVICE=d2att \
-    BUILD_FINGERPRINT="samsung/d2uc/d2att:4.4.2/KOT49H/I747UCUFNE4:user/release-keys" \
-    PRIVATE_BUILD_DESC="d2uc-user 4.4.2 KOT49H I747UCUFNE4 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d2vzw TARGET_DEVICE=d2vzw BUILD_FINGERPRINT="Verizon/d2vzw/d2vzw:4.1.2/JZO54K/I535VRBMF1:user/release-keys" PRIVATE_BUILD_DESC="d2vzw-user 4.1.2 JZO54K I535VRBMF1 release-keys"
 
-PRODUCT_NAME := broken_d2att
-PRODUCT_DEVICE := d2att
+PRODUCT_NAME := broken_d2vzw
+PRODUCT_DEVICE := d2vzw
